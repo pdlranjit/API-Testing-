@@ -18,7 +18,7 @@ def Details(request):
         serializer=StudentSerializer(data=request.data)
         if serializer.is_valid():
             serializer.save()
-            return Response(serializer.data,status=status.HTTP_201_CREATED)
+            return Response(serializer.data,status=status.HTTP_202_ACCEPTED)
         
 @api_view(['GET','PUT','DELETE'])
 def Details_list(request,id):
